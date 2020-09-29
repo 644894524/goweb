@@ -39,6 +39,8 @@ func main() {
 		fmt.Println(str1)
 	}
 
+
+
 	//闭包
 	next := getSequence()
 	fmt.Println(next())
