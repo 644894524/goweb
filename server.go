@@ -38,4 +38,17 @@ func main() {
 		str1 := fmt.Sprintf("key = %d, v = %+v, id = %d, name = %s, color = %v", k, v, v.Id, v.Name, v.Colors)
 		fmt.Println(str1)
 	}
+
+	//闭包
+	next := getSequence()
+	fmt.Println(next())
+	fmt.Println(next())
+}
+
+func getSequence() func() int{
+	var num int = 0
+	return func() int {
+		num = num + 1
+		return num
+	}
 }
