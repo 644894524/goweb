@@ -8,7 +8,7 @@ type Person struct {
 	Sex  string
 }
 
-func (p Person) Show() string{
+func (p *Person) Show() string{
 	return fmt.Sprintf("my name is %s, Im %d years old", p.Name, p.Age)
 }
 
